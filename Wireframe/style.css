@@ -49,11 +49,25 @@ main {
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
 }
-footer {
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+section article{
+  flex:1;
+  min-width: 0;
+}
+
+/* footer {
   position: fixed;
   bottom: 0;
   text-align: center;
-}
+} */
 /* ====== Articles Grid Layout ====
 Setting the rules for how articles are placed in the main element.
 Inspect this in Devtools and click the "grid" button in the Elements view
@@ -61,14 +75,14 @@ Play with the options that come up.
 https://developer.chrome.com/docs/devtools/css/grid
 https://gridbyexample.com/learn/
 */
-main {
+/* main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space);
   > *:first-child {
     grid-column: span 2;
   }
-}
+} */
 /* ====== Article Layout ====== 
 Setting the rules for how elements are placed in the article. 
 Now laying out just the INSIDE of the repeated card/article design.
@@ -87,3 +101,4 @@ article {
     grid-column: span 3;
   }
 }
+
