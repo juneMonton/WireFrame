@@ -6,22 +6,61 @@
     <title>My form exercise</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Product Pick</h1>
+      <h1>Make an Order</h1>
     </header>
     <main>
       <form>
         <!-- write your html here-->
+         <p>Please complete all required (*) fields.</p>
+         <div>
+          <label for="name">Customer name</label>
+          <input id="name" name="name" type="text" required pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" title="Use letters, spaces, hyphens or apostrophes — 2 to 50 characters">
+          </div>
+          
+          
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address">
+          </div>
+          
+          
+          <div>
+            <label>Shirt colour</label><br>
+            <input type="radio" name="colour" value="black" required> Black<br>
+            <input type="radio" name="colour" value="white"> White<br>
+            <input type="radio" name="colour" value="navy"> Navy
+          </div>
+          
+          
+          <div>
+          <label for="size">Size</label>
+          <select id="size" name="size" required>
+          <option value="" disabled selected>Choose a size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+          </select>
+          </div>
+          
+          
+          <button type="submit">Place order</button>
         <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+          What is the customer's name? I must collect this data, and validate it. But what is a valid name? I must decide something.
+          What is the customer's email? I must make sure the email is valid. Email addresses have a consistent pattern.
+          What colour should this t-shirt be? I must give 3 options. How will I make sure they don't pick other colours?
+          What size does the customer want? I must give the following 6 options: XS, S, M, L, XL, XXL-->
       </form>
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <p>By junemonton@2025</p>
     </footer>
   </body>
 </html>
