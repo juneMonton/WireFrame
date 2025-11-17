@@ -6,7 +6,7 @@
     <title>My form exercise</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="style.css" />-->
   </head>
   <body>
     <header>
@@ -20,21 +20,33 @@
           <label for="name">Customer name</label>
           <input id="name" name="name" type="text" required pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" title="Use letters, spaces, hyphens or apostrophes — 2 to 50 characters">
           </div>
-          
+          <br>
           
           <div>
             <label for="email">Email address</label>
             <input id="email" name="email" type="email" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address">
           </div>
           
-          
+         <br>
           <div>
-            <label>Shirt colour</label><br>
-            <input type="radio" name="colour" value="black" required> Black<br>
-            <input type="radio" name="colour" value="white"> White<br>
-            <input type="radio" name="colour" value="navy"> Navy
-          </div>
+            <legend>Choose your shirt color</legend>
           
+            <div>
+              <input type="radio" id="black" name="colour" value="black" required>
+              <label for="black">Black</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="white" name="colour" value="white">
+              <label for="white">White</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="navy" name="colour" value="navy">
+              <label for="navy">Navy</label>
+            </div>
+          </div>
+          <br>
           
           <div>
           <label for="size">Size</label>
@@ -48,7 +60,7 @@
           <option>XXL</option>
           </select>
           </div>
-          
+          <br>
           
           <button type="submit">Place order</button>
         <!-- 
